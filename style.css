@@ -1,0 +1,341 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url('https://aenui.org/wp-content/uploads/2014/07/university-background-04.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-container {
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  padding: 30px;
+  margin: 100px auto 40px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .welcome-container {
+    padding: 20px;
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-container {
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.95rem;
+  }
+}
+
+nav {
+  margin-bottom: 30px;
+  background-color: transparent;
+  box-shadow: 0 8px 20px #b9b8b8;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #9fa4a8;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #dddcdc;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+form#studentForm {
+  background-color: transparent;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form#studentForm input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.upload-btn {
+  background-color: #346791;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 10px;
+  align-self: flex-start;
+}
+
+.upload-btn:hover {
+  background-color: white;
+  color: #346791;
+  border: 1px solid #346791;
+}
+
+#studentImgPreview {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+form#studentForm button[type="submit"] {
+  margin-top: 20px;
+  color: white;
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container,
+.list-container,
+.student-card {
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.form-container:hover,
+.list-container:hover,
+.student-card:hover,
+.welcome-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.6);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #005fa3;
+  background-color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-file-upload:hover {
+  background-color: #005fa3;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+button {
+  background: linear-gradient(135deg, #0077cc, #00b3b3);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #005fa3, #009999);
+  transform: scale(1.05);
+}
+
+.register-btn {
+  display: block;
+  width: 40%; 
+  max-width: 200px; 
+  min-width: 140px; 
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #1976D2;
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  .register-btn {
+    font-size: 15px;
+    padding: 9px 16px;
+  }
+}
+
+
+#previewArea img {
+  display: block;
+  max-width: 150px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* === MAIN STUDENT CARD CONTAINER === */
+#studentList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 12px;
+}
+
+.student-card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-direction: row;
+}
+
+.student-card img {
+  width: 100px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.student-details {
+  flex: 1;
+}
+
+.student-details p {
+  margin: 5px 0;
+  color: black;
+}
+
+.grades-section {
+  margin-top: 10px;
+}
+
+.grades-section select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .form-container,
+  .student-card,
+  .list-container {
+    padding: 20px;
+  }
+
+  .student-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .student-card img {
+    margin-bottom: 10px;
+  }
+
+  .student-details {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  input,
+  select {
+    padding: 0.6rem;
+    font-size: 0.95rem;
+  }
+
+  .custom-file-upload {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .student-card button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}

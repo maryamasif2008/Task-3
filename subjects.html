@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Manage Subjects</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav>
+    <a href="register.html">Register Student</a> |
+    <a href="subjects.html">Manage Subjects</a> |
+    <a href="students.html">Students & CGPA</a>
+  </nav>
+
+  <h2>Manage Subjects</h2>
+  <form id="subjectForm">
+    <input type="text" name="subName" placeholder="Subject Name" required />
+    <input type="text" name="subCode" placeholder="Subject Code" required />
+    <input type="number" name="credit" placeholder="Credit Hours" required min="1" />
+    <input type="text" name="instructor" placeholder="Instructor Name" required />
+    <button type="submit">Add Subject</button>
+  </form>
+
+  <div id="subjectList"></div>
+
+  <script src="subject.js"></script>
+</body>
+</html>
